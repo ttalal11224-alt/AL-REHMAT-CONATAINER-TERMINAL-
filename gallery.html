@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Al Rehmat Container Terminal</title>
+  <meta name="description" content="View our gallery of container projects – storage units, offices, cafes, shops and deliveries across Pakistan." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>" />
+  <style>
+    .gallery-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: .5rem 1.25rem;
+      border-radius: 50px;
+      border: 2px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+    }
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 1rem;
+    }
+    .gallery-masonry .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      aspect-ratio: auto;
+      min-height: 180px;
+    }
+    .gallery-masonry .gallery-item.tall-card { min-height: 320px; }
+    @media (max-width: 768px) {
+      .gallery-masonry { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🚛</div>
+        <div class="nav-logo-text">
+          <span>Al Rehmat</span>
+          <span class="sub">Container Terminal</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="btn btn-primary nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container page-header-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Gallery</span>
+      </nav>
+      <h1>Our <span class="highlight">Gallery</span></h1>
+      <p>Real containers, real projects. Browse our portfolio of deliveries, modifications and installations across Pakistan.</p>
+    </div>
+  </header>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="storage">Storage Units</button>
+        <button class="filter-btn" data-filter="office">Container Offices</button>
+        <button class="filter-btn" data-filter="custom">Custom Builds</button>
+        <button class="filter-btn" data-filter="delivery">Deliveries</button>
+        <button class="filter-btn" data-filter="before-after">Before &amp; After</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-masonry">
+
+        <div class="gallery-item" data-category="storage">
+          <div class="gallery-placeholder">
+            <span>📦</span>
+            20ft Storage Container
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">20ft Standard Storage – Lahore</div>
+          </div>
+        </div>
+
+        <div class="gallery-item tall-card" data-category="office">
+          <div class="gallery-placeholder">
+            <span>🏢</span>
+            Container Office
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Container Site Office – Islamabad</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder">
+            <span>☕</span>
+            Container Cafe
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Custom Container Cafe – Lahore</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="delivery">
+          <div class="gallery-placeholder">
+            <span>🚛</span>
+            Container Delivery
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">40ft Container Delivery – Karachi</div>
+          </div>
+        </div>
+
+        <div class="gallery-item tall-card" data-category="custom">
+          <div class="gallery-placeholder">
+            <span>🏪</span>
+            Container Shop
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Container Retail Store – Faisalabad</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="before-after">
+          <div class="gallery-placeholder">
+            <span>🔧</span>
+            Modification Work
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Windows & Doors Modification</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder">
+            <span>🏠</span>
+            Container Home
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Portable Container Home – Punjab</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="custom">
+          <div class="gallery-placeholder">
+            <span>🛡️</span>
+            Security Cabin
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Container Security Cabin – Multan</div>
+          </div>
+        </div>
+
+        <div class="gallery-item tall-card" data-category="storage">
+          <div class="gallery-placeholder">
+            <span>🏭</span>
+            Warehouse Units
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Container Warehouse Complex – Karachi</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="before-after">
+          <div class="gallery-placeholder">
+            <span>🎨</span>
+            Before → After
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Before & After: Cafe Conversion</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="storage">
+          <div class="gallery-placeholder">
+            <span>🌾</span>
+            Farm Storage
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Farm Storage Unit – Sahiwal</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="delivery">
+          <div class="gallery-placeholder">
+            <span>🎪</span>
+            Event Booth
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption">Container Event Booth – Islamabad</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Upload Notice -->
+      <div style="background:var(--light);border-radius:var(--radius-lg);padding:2rem;text-align:center;margin-top:3rem;border:2px dashed var(--border);">
+        <div style="font-size:2.5rem;margin-bottom:.75rem;">📸</div>
+        <h3 style="color:var(--secondary);margin-bottom:.5rem;">More Photos Coming Soon</h3>
+        <p style="color:var(--text-light);margin-bottom:1.25rem;">We're adding more project photos regularly. In the meantime, WhatsApp us for real project images!</p>
+        <a href="https://wa.me/923008494431?text=Hello%2C%20please%20share%20container%20photos" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Request Photos on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT STATS ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Our <span class="highlight">Track Record</span></h2>
+      <p class="section-subtitle">Numbers that speak for themselves – years of delivering quality across Pakistan.</p>
+      <div class="grid-4">
+        <div style="text-align:center;padding:2rem;">
+          <div class="stat-number" data-target="500" data-suffix="+" style="color:var(--primary);font-size:2.5rem;font-weight:700;">500+</div>
+          <div style="color:var(--text-light);margin-top:.25rem;">Containers Delivered</div>
+        </div>
+        <div style="text-align:center;padding:2rem;">
+          <div class="stat-number" data-target="50" data-suffix="+" style="color:var(--primary);font-size:2.5rem;font-weight:700;">50+</div>
+          <div style="color:var(--text-light);margin-top:.25rem;">Custom Builds Completed</div>
+        </div>
+        <div style="text-align:center;padding:2rem;">
+          <div class="stat-number" data-target="30" data-suffix="+" style="color:var(--primary);font-size:2.5rem;font-weight:700;">30+</div>
+          <div style="color:var(--text-light);margin-top:.25rem;">Cities Served</div>
+        </div>
+        <div style="text-align:center;padding:2rem;">
+          <div class="stat-number" data-target="300" data-suffix="+" style="color:var(--primary);font-size:2.5rem;font-weight:700;">300+</div>
+          <div style="color:var(--text-light);margin-top:.25rem;">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Inspired? Let's Build Your Project!</h2>
+      <p>Share your idea with us and we'll make it a reality. Free consultation, fair pricing.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-white btn-lg">📋 Request a Quote</a>
+        <a href="https://wa.me/923008494431?text=Hello%2C%20I%20saw%20your%20gallery%20and%20want%20a%20similar%20project" class="btn btn-outline-white btn-lg" target="_blank" rel="noopener">💬 Discuss on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">🚛</div>
+            <div>
+              <span>Al Rehmat</span><br/>
+              <span style="font-size:.75rem;opacity:.6;font-weight:400;">Container Terminal</span>
+            </div>
+          </div>
+          <p>Pakistan's trusted provider of container rental, sales, transport and custom modifications.</p>
+          <div class="social-links">
+            <a href="https://wa.me/923008494431" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+            <a href="tel:+923008494431" class="social-link" aria-label="Phone">📞</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="solutions.html">Container Solutions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#rental">Container Rental</a></li>
+            <li><a href="services.html#sales">Container Sales</a></li>
+            <li><a href="services.html#transport">Container Transport</a></li>
+            <li><a href="services.html#modification">Custom Modification</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>📍</span><span>Lahore, Pakistan</span></div>
+          <div class="footer-contact-item"><span>📞</span><a href="tel:+923008494431">+92 300 8494431</a></div>
+          <div class="footer-contact-item"><span>💬</span><a href="https://wa.me/923008494431" target="_blank" rel="noopener">WhatsApp Chat</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Al Rehmat Container Terminal. All rights reserved.</p>
+        <p>Made with ❤️ in Lahore, Pakistan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923008494431?text=Hello%2C%20I%20need%20a%20container%20quote"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+    💬
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
